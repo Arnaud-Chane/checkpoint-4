@@ -1,4 +1,4 @@
-I want to create login page only visual. give me a list of 5 name of title for git branch of this feature with underscore to seperate words.
+Features :
 
 login_page_visual
 register_page_visual
@@ -7,6 +7,45 @@ user_movie_description_page_visual
 admin_home_page_visual
 admin_listing_movies_page_visual
 admin_listing_members_page_visual
+
+create_database_members
+create_database_movies
+
+back_create_routes_for_members
+back_create_routes_for_movies
+
+register_members
+
+verify_token
+veriy_password
+verify_pseudo
+verify_email
+verify_roles
+Listing_all_movies
+Listing_only_last_10_movies
+Listing_all_members
+Searchbar_reusable_for_members_and_movies
+
+front_create_routes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+En Vrac :
+
+
+
+
 
 
 
