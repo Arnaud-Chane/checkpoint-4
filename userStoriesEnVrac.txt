@@ -2,31 +2,38 @@ Features :
 
 login_page_visual
 register_page_visual
-user_home_page_visual
-user_movie_description_page_visual
-admin_home_page_visual
-admin_listing_movies_page_visual
-admin_listing_members_page_visual
+listing_tasks_page_visual
 
 create_database_members
-create_database_movies
-
-back_create_routes_for_members
-back_create_routes_for_movies
-
-register_members
-
-verify_token
-veriy_password
-verify_pseudo
-verify_email
-verify_roles
-Listing_all_movies
-Listing_only_last_10_movies
-Listing_all_members
-Searchbar_reusable_for_members_and_movies
+create_database_tasks
 
 front_create_routes
+back_create_routes_for_members
+back_create_routes_for_tasks
+
+register_new_members
+login_members
+
+verify_password
+verify_pseudo
+verify_email
+
+create_and_verify_token_at_login
+create_and_verify_token_at_register
+
+secure_routes
+
+listing_all_tasks
+delete_tasks
+progress_bar
+history_button
+removed_done_button
+search_task_bar
+add_task_bar
+styling_bars
+
+
+
 
 
 
