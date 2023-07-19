@@ -88,7 +88,7 @@ const updateIsAdmin = (req, res) => {
     });
 };
 
-const destroy = (req, res) => {
+const deleteUser = (req, res) => {
   models.user
     .delete(req.params.id)
     .then(([result]) => {
@@ -149,7 +149,7 @@ module.exports = {
   getUserById,
   createUser,
   updateUser,
-  destroy,
+  deleteUser,
   getUserByEmailWithPasswordAndPassToNext,
   getUserInformation,
   updateIsAdmin,
