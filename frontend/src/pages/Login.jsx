@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import InputForm from "../components/InputForm";
 
 export default function Login() {
@@ -33,10 +35,10 @@ export default function Login() {
             Connexion
           </button>
 
-          <p>Inscription</p>
+          <Link to="/sign-up">
+            <p>Inscription</p>
+          </Link>
         </div>
-
-        <p>Mot de passe oublié ?</p>
       </div>
     </div>
   );
