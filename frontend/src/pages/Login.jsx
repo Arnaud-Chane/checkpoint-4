@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import InputForm from "../components/InputForm";
 
 export default function Login() {
+  const [emailLogin, setEmailLogin] = useState("");
+  const [passwordLogin, setPasswordLogin] = useState("");
+
   const handleSubmit = async () => {
     console.info("test");
   };
@@ -10,9 +14,18 @@ export default function Login() {
       <h2>Accéder à votre compte</h2>
 
       <form onSubmit={handleSubmit}>
-        <input />
-
-        <input />
+        <InputForm
+          state={emailLogin}
+          setter={setEmailLogin}
+          type="email"
+          placeholder="Email*"
+        />
+        <InputForm
+          state={passwordLogin}
+          setter={setPasswordLogin}
+          type="password"
+          placeholder="Mot de passe*"
+        />
       </form>
       <div className="links-page-login">
         <div className="buttons-container-login-page">
