@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import InputForm from "../components/InputForm";
 import Button from "../components/Button";
 
@@ -9,7 +10,24 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.info("test");
+
+    const body = {
+      email,
+      password,
+    };
+
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/users`,
+        body
+      );
+
+      if (response.status === 201) {
+        console.info("User registered");
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
