@@ -30,6 +30,19 @@ const router = createBrowserRouter([
         path: "/sign-up",
         element: <SignUp />,
       },
+      {
+        path: "/admin",
+        children: [
+          {
+            index: true,
+            element: <Navigate to="/admin/user-list" replace />,
+          },
+          {
+            path: "user-list",
+            element: <Home />,
+          },
+        ],
+      },
     ],
   },
 ]);
