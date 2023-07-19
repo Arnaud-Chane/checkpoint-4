@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import InputForm from "../components/InputForm";
+import Button from "../components/Button";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -30,6 +31,7 @@ function Signup() {
       />
 
       <div className="form_navigate">
+        <Button type="submit" className="primary-button" text="Valider" />
         <Link to="/login">
           <p className="form_login_link">Déjà inscrit(e) ?</p>
         </Link>
