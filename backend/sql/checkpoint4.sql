@@ -6,7 +6,8 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_id` integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `email` varchar(255) UNIQUE NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `is_admin` integer
 );
 
 DROP TABLE IF EXISTS `tasks`;
@@ -17,13 +18,14 @@ CREATE TABLE `tasks` (
   FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
 );
 
-INSERT INTO users (email, password)
+INSERT INTO users (email, password, is_admin)
 VALUES 
-  ('valerie.apert@example.com', "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"),
-  ('alice.johnsie@example.com', "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"),
-  ('robert.brown@example.com', "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"),
-  ('julia.lee@example.com', "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"),
-  ('alexandre.moreau@example.com', "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ");
+  ('valerie.apert@example.com', "$argon2id$v=19$m=65536,t=5,p=1$7y5DipbF2biofOLgY38Eyg$WZ8mz2svq5bYZOjVsoYgFXkapyifGXdR7tplz+tOlnw", 0),
+  ('alice.johnsie@example.com', "$argon2id$v=19$m=65536,t=5,p=1$7y5DipbF2biofOLgY38Eyg$WZ8mz2svq5bYZOjVsoYgFXkapyifGXdR7tplz+tOlnw", 0),
+  ('robert.brown@example.com', "$argon2id$v=19$m=65536,t=5,p=1$7y5DipbF2biofOLgY38Eyg$WZ8mz2svq5bYZOjVsoYgFXkapyifGXdR7tplz+tOlnw", 0),
+  ('julia.lee@example.com', "$argon2id$v=19$m=65536,t=5,p=1$7y5DipbF2biofOLgY38Eyg$WZ8mz2svq5bYZOjVsoYgFXkapyifGXdR7tplz+tOlnw", 0),
+  ('alexandre.moreau@example.com', "$argon2id$v=19$m=65536,t=5,p=1$7y5DipbF2biofOLgY38Eyg$WZ8mz2svq5bYZOjVsoYgFXkapyifGXdR7tplz+tOlnw", 0),
+  ('test@gmail.com', "$argon2id$v=19$m=65536,t=5,p=1$7y5DipbF2biofOLgY38Eyg$WZ8mz2svq5bYZOjVsoYgFXkapyifGXdR7tplz+tOlnw", '1');
 
 INSERT INTO tasks (name, user_id) 
 VALUES 
