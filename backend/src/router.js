@@ -3,10 +3,9 @@ const express = require("express");
 const router = express.Router();
 
 const { hashPassword } = require("./middlewares/auth");
-
 const userControllers = require("./controllers/userControllers");
 
-router.post("/users", userControllers.createUser);
+router.post("/users", hashPassword, userControllers.createUser);
 
 router.get("/users", userControllers.getAllUsers);
 router.get("/users/:id", userControllers.getUserById);
