@@ -12,10 +12,24 @@ class TaskManager extends AbstractManager {
     );
   }
 
-  updateTask(tasks) {
+  updateTaskName(tasks) {
     return this.database.query(
       `UPDATE ${this.table} SET name = ? WHERE task_id = ?`,
       [tasks.name]
+    );
+  }
+
+  updateTaskIfDone(tasks) {
+    return this.database.query(
+      `UPDATE ${this.table} SET task_done = ? WHERE task_id = ?`,
+      [tasks.task_done]
+    );
+  }
+
+  updateTaskIfArchived(tasks) {
+    return this.database.query(
+      `UPDATE ${this.table} SET task_archived = ? WHERE task_id = ?`,
+      [tasks.task_archived]
     );
   }
 }
