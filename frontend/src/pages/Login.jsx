@@ -11,8 +11,23 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    console.log('test');
-    navigate("/");
+    const body = {
+      email: emailLogin,
+      password: passwordLogin,
+    };
+
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/login`,
+        body
+      );
+      if (response.status === 200) {
+        localStorage.setItem("token", response.data.token);
+        navigate("/");
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
