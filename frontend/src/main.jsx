@@ -46,7 +46,11 @@ const router = createBrowserRouter([
           },
           {
             path: "user-list",
-            element: <Home />,
+            element: (
+              <PrivateRoutes expectedRoles={[userRoles.admin]}>
+                <Home />
+              </PrivateRoutes>
+            ),
           },
         ],
       },
