@@ -4,24 +4,9 @@ Features :
 02-register_page_visual
 03-listing_tasks_page_visual
 
-04-create_database_members
 05-create_database_tasks
 
-06-front_create_routes
-07-back_create_routes_for_members
 08-back_create_routes_for_tasks
-
-09-register_new_members
-10-login_members
-
-11-verify_password
-12-verify_pseudo
-13-verify_email
-
-14-create_and_verify_token_at_login
-15-create_and_verify_token_at_register
-
-16-secure_routes
 
 17-listing_all_tasks
 18-delete_tasks
@@ -33,6 +18,17 @@ Features :
 24-styling_bars
 
 
+
+Done :
+04-create_database_members
+06-front_create_routes
+07-back_create_routes_for_members
+09-register_new_members
+10-login_members
+11-verify_password
+13-verify_email
+14-create_and_verify_token_at_login
+16-secure_routes
 
 
 
