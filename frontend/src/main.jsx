@@ -6,6 +6,9 @@ import {
   Navigate,
 } from "react-router-dom";
 
+import PrivateRoutes from "./utils/PrivateRoutes";
+import userRoles from "./utils/constantRoles";
+
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
@@ -20,7 +23,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/home",
-        element: <Home />,
+        element: (
+          <PrivateRoutes expectedRoles={[userRoles.admin, userRoles.user]}>
+            <Home />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/login",
