@@ -54,7 +54,7 @@ function PrivateRoutes({ expectedRoles, children }) {
     : true;
 
   if (!isAuthorized || !rolesMatch) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/page-403" replace />;
   }
 
   return children;
