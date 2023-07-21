@@ -2,7 +2,11 @@ const express = require("express");
 
 const router = express.Router();
 
-const { hashPassword, verifyPassword } = require("./middlewares/auth");
+const {
+  hashPassword,
+  verifyPassword,
+  verifyToken,
+} = require("./middlewares/auth");
 const userControllers = require("./controllers/userControllers");
 
 router.post("/users", hashPassword, userControllers.createUser);
@@ -16,9 +20,12 @@ router.get("/users", userControllers.getAllUsers);
 router.get("/users/:id", userControllers.getUserById);
 router.post("/users", hashPassword, userControllers.createUser);
 router.put("/users/:id", userControllers.updateUser);
-router.delete("/userinformation/:id", userControllers.deleteUser);
-router.put("/isadmin/:id", userControllers.updateIsAdmin);
+router.put("/is-admin/:id", userControllers.updateIsAdmin);
 router.delete("/users/:id", userControllers.deleteUser);
-router.post("/userinformation", userControllers.getUserInformation);
+router.post(
+  "/userinformation",
+  verifyToken,
+  userControllers.getUserInformation
+);
 
 module.exports = router;
