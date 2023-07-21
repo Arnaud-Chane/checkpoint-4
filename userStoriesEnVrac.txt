@@ -3,8 +3,9 @@ Features :
 01-login_page_visual
 02-register_page_visual
 03-listing_tasks_page_visual
-
-05-create_database_tasks
+25-403_page
+26-404_page
+27-500_page
 
 08-back_create_routes_for_tasks
 
@@ -17,12 +18,7 @@ Features :
 23-add_task_bar
 24-styling_bars
 
-25-403_page
-26-404_page
-27-500_page
 
-28-redirect_to_403_if_forbidden
-29-redirect_to_404_if_page_not_found
 30-redirect_to_500_if_error_server
 
 
@@ -31,6 +27,8 @@ Features :
 
 Done :
 04-create_database_members
+05-create_database_tasks
+
 06-front_create_routes
 07-back_create_routes_for_members
 09-register_new_members
@@ -40,7 +38,8 @@ Done :
 14-create_and_verify_token_at_login
 16-secure_routes
 
-
+28-redirect_to_403_if_forbidden
+29-redirect_to_404_if_page_not_found
 
 
 
