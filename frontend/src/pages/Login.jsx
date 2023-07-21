@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 import InputForm from "../components/InputForm";
 
@@ -7,8 +8,11 @@ export default function Login() {
   const [emailLogin, setEmailLogin] = useState("");
   const [passwordLogin, setPasswordLogin] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async () => {
-    console.info("test");
+    console.log('test');
+    navigate("/");
   };
 
   return (
@@ -31,7 +35,11 @@ export default function Login() {
       </form>
       <div className="links-page-login">
         <div className="buttons-container-login-page">
-          <button className="primary-button" type="submit">
+          <button
+            className="primary-button"
+            type="submit"
+            onClick={() => handleSubmit()}
+          >
             Connexion
           </button>
 
