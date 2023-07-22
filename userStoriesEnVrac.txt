@@ -1,7 +1,11 @@
 Features :
-latest : 31
+modif user on admin user list
 
 
+
+
+Branch Names :
+Latest : 31
 
 17-listing_all_tasks
 18-delete_tasks
@@ -47,49 +51,5 @@ Done :
 
 28-redirect_to_403_if_forbidden
 29-redirect_to_404_if_page_not_found
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-En Vrac :
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
