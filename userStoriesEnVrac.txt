@@ -1,13 +1,9 @@
 Features :
-modif user on admin user list
-
-
 
 
 Branch Names :
-Latest : 33
+Latest : 42
 
-18-delete_tasks
 19-progress_bar
 20-history_button_for_archived_tasks
 21-done_button
@@ -17,17 +13,19 @@ Latest : 33
 30-redirect_to_500_if_error_server
 33-navbar_toggle_between_admin_and_user
 
+34-styling_home_user_page
+35-styling_home_admin_page
+36-styling_login_page
+37-styling_signup_page
+38-styling_navbar
+39-styling_page_403
+40-styling_page_404
+41-styling_page_500
+
+42-modif_users_on_admin_page
 
 
 ToFinish :
-Style :
-01-login_page_visual
-02-register_page_visual
-03-listing_tasks_page_visual
-25-403_page
-26-404_page
-27-500_page
-31-admin_listing_all_users_page
 
 
 
@@ -48,6 +46,8 @@ Done :
 14-create_and_verify_token_at_login
 16-secure_routes
 17-listing_all_tasks_on_home_user_page
+18-delete_tasks
+
 23-add_task_bar
 
 28-redirect_to_403_if_forbidden
