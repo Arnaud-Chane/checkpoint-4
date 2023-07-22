@@ -8,6 +8,7 @@ const {
   verifyToken,
 } = require("./middlewares/auth");
 const userControllers = require("./controllers/userControllers");
+const taskControllers = require("./controllers/taskControllers");
 
 router.post("/users", hashPassword, userControllers.createUser);
 router.post(
@@ -27,5 +28,13 @@ router.post(
   verifyToken,
   userControllers.getUserInformation
 );
+
+router.get("/tasks", taskControllers.getAllTasks);
+router.get("/tasks/:id", taskControllers.getTaskById);
+router.post("/tasks", taskControllers.createTask);
+router.put("/tasks/:id", taskControllers.updateTaskName);
+router.put("/tasks/is-done/:id", taskControllers.updateTaskIfDone);
+router.put("/tasks/is-archived/:id", taskControllers.updateTaskIfArchived);
+router.delete("/tasks/:id", taskControllers.deleteTask);
 
 module.exports = router;
