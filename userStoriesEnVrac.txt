@@ -5,7 +5,7 @@ modif user on admin user list
 
 
 Branch Names :
-Latest : 32
+Latest : 33
 
 18-delete_tasks
 19-progress_bar
@@ -17,6 +17,7 @@ Latest : 32
 
 30-redirect_to_500_if_error_server
 32-logout_function
+33-navbar_toggle_between_admin_and_user
 
 
 
