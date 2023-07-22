@@ -15,6 +15,8 @@ CREATE TABLE `task` (
   `task_id` integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `user_id` integer,
   `name` varchar(255),
+  `task_done` integer,
+  `task_archived` integer,
   FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 );
 
@@ -27,15 +29,15 @@ VALUES
   ('alexandre.moreau@example.com', "$argon2id$v=19$m=65536,t=5,p=1$03NmfWlLIBE0woTiJvADKA$VqPe3FJVqk28F0tpi1iAh62GyS2IO+tYM/seIjhhny4", 0),
   ('test@gmail.com', "$argon2id$v=19$m=65536,t=5,p=1$03NmfWlLIBE0woTiJvADKA$VqPe3FJVqk28F0tpi1iAh62GyS2IO+tYM/seIjhhny4", '1');
 
-INSERT INTO task (name, user_id) 
+INSERT INTO task (name, user_id, task_done,task_archived) 
 VALUES 
-("test1", 1),
-("test2", 1),
-("test3", 1),
-("test4", 1),
-("test5", 1),
-("test6", 1),
-("test7", 1),
-("test8", 1),
-("test9", 1),
-("test10", 1);
+("test1", 1, 0, 0),
+("test2", 1, 0, 0),
+("test3", 1, 0, 0),
+("test4", 1, 0, 0),
+("test5", 2, 0, 0),
+("test6", 2, 0, 0),
+("test7", 2, 0, 0),
+("test8", 3, 0, 0),
+("test9", 4, 0, 0),
+("test10", 3, 0, 0);
