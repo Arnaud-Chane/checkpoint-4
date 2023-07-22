@@ -32,7 +32,7 @@ const getTaskById = (req, res) => {
 
 const getTaskByUser = (req, res) => {
   models.task
-    .findTaskByUserEmail(req.params.id)
+    .findTaskByUserId(req.params.id)
     .then(([task]) => {
       if (task[0] == null) {
         res.sendStatus(404);
