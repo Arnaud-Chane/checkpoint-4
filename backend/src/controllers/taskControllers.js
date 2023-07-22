@@ -30,7 +30,7 @@ const getTaskById = (req, res) => {
     });
 };
 
-const getTaskByUser = (req, res) => {
+const getTaskByUserId = (req, res) => {
   models.task
     .findTaskByUserId(req.params.id)
     .then(([task]) => {
@@ -138,7 +138,7 @@ const deleteTask = (req, res) => {
 module.exports = {
   getAllTasks,
   getTaskById,
-  getTaskByUser,
+  getTaskByUserId,
   createTask,
   updateTaskName,
   updateTaskIfDone,

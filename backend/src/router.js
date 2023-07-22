@@ -29,6 +29,7 @@ router.post(
   userControllers.getUserInformation
 );
 
+router.get("/users/tasks/:id", taskControllers.getTaskByUserId);
 router.get("/tasks", taskControllers.getAllTasks);
 router.get("/tasks/:id", taskControllers.getTaskById);
 router.post("/tasks", taskControllers.createTask);
