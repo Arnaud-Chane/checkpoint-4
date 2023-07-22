@@ -25,6 +25,27 @@ function Home() {
     fetchTask();
   }, []);
 
+  const handleSubmit = async () => {
+    const body = {
+      name: newTasks,
+      user_id: userInfo.userId,
+      task_done: 0,
+      task_archived: 0,
+    };
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/tasks`,
+        body
+      );
+      if (response.status === 201) {
+        console.info("Task added to db");
+        setNewTasks("");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div className="HomeAdminListingtask">
       <div className="add-input">
@@ -34,6 +55,13 @@ function Home() {
           type="text"
           placeholder="Add task here..."
         />
+        <button
+          className="add-task-btn"
+          type="submit"
+          onClick={() => handleSubmit()}
+        >
+          +
+        </button>
       </div>
 
       <ul className="task-list">
