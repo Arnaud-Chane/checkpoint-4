@@ -30,6 +30,22 @@ const getTaskById = (req, res) => {
     });
 };
 
+const getTaskByUser = (req, res) => {
+  models.task
+    .findTaskByUserEmail(req.params.id)
+    .then(([task]) => {
+      if (task[0] == null) {
+        res.sendStatus(404);
+      } else {
+        res.send(task[0]);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const createTask = (req, res) => {
   const task = req.body;
 
@@ -122,6 +138,7 @@ const deleteTask = (req, res) => {
 module.exports = {
   getAllTasks,
   getTaskById,
+  getTaskByUser,
   createTask,
   updateTaskName,
   updateTaskIfDone,
