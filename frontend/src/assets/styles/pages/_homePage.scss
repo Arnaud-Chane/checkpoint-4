@@ -1,0 +1,55 @@
+.HomeAdminListingtask {
+  @include flex-vertical;
+  align-items: center;
+
+  .my-todo-list-title {
+    margin: 1rem;
+  }
+
+  .add-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: 80vw;
+    margin: 2vh auto;
+    padding: 2vh 2vw;
+
+    .add-task-btn {
+      width: 5rem;
+      height: 1.5rem;
+      background-color: $app-bg-color-button;
+      border-radius: 20px;
+    }
+  }
+
+  .task-list {
+    @include flex-vertical;
+    height: 70vh;
+    width: 80vw;
+    margin: 2vh auto;
+    padding: 2vh 2vh;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+
+    .task {
+      display: flex;
+      margin: 1vh;
+      align-items: center;
+      background-color: white;
+
+      .task-to-edit {
+        margin: 0 1rem;
+        background-color: white;
+      }
+
+      .delete-btn {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $app-bg-color-button;
+        border-radius: 20px;
+      }
+    }
+  }
+}

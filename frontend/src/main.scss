@@ -1,0 +1,22 @@
+@import "./assets/styles/variables";
+
+@import "./assets/styles/pages/homePage.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $app-primary-font;
+  background-color: $app-bg-color;
+}
+
+
+@media screen and (min-width: $app-tablet) and (max-width: $app-desktop) {
+
+}
+
+@media screen and (min-width: $app-desktop) {
+
+}

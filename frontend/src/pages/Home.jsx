@@ -62,6 +62,9 @@ function Home() {
 
   return (
     <div className="HomeAdminListingtask">
+      <div className="my-todo-list">
+        <h1 className="my-todo-list-title">My Todo List</h1>
+      </div>
       <div className="add-input">
         <InputForm
           state={newTasks}
@@ -74,7 +77,7 @@ function Home() {
           type="submit"
           onClick={() => handleSubmit()}
         >
-          +
+          Add Task
         </button>
       </div>
 
@@ -82,7 +85,6 @@ function Home() {
         {taskList.map((task) => {
           return (
             <li className="task" key={task.task_id}>
-              <div className="task-to-edit">{task.name}</div>
               <button
                 className="delete-btn"
                 type="submit"
@@ -90,6 +92,7 @@ function Home() {
               >
                 X
               </button>
+              <div className="task-to-edit">{task.name}</div>
             </li>
           );
         })}

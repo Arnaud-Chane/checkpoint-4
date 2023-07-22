@@ -5,6 +5,7 @@ import {
   RouterProvider,
   Navigate,
 } from "react-router-dom";
+import "./main.scss";
 
 import Root from "./layout/Root";
 

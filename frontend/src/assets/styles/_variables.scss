@@ -1,0 +1,25 @@
+/* Website Font */
+$app-primary-font: "Roboto", sans-serif;
+$font-family-title: "Poppins", serif;
+
+/* Media query */
+$app-mobile: 320px;
+$app-tablet: 768px;
+$app-desktop: 1024px;
+$app-desktop-medium: 1440px;
+$app-desktop-large: 1680px;
+
+/* Website Font Size */
+$font-size-text-phone: 14px;
+$font-size-text-phone-home: 18px;
+$font-size-text-tablet: 20px;
+$font-size-list-burger-tablet: 38px;
+
+/* Website Background */
+$app-bg-color: #F7CCC3;
+$app-bg-color-button: #F8A847;
+
+@mixin flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
