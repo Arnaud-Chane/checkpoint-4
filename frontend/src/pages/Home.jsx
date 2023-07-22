@@ -8,6 +8,7 @@ function Home() {
 
   const [taskList, setTaskList] = useState([]);
   const [newTasks, setNewTasks] = useState("");
+  const [fetchData, setFetchData] = useState(false);
 
   useEffect(() => {
     const fetchTask = async () => {
@@ -23,7 +24,7 @@ function Home() {
       }
     };
     fetchTask();
-  }, []);
+  }, [fetchData]);
 
   const handleSubmit = async () => {
     const body = {
@@ -40,6 +41,7 @@ function Home() {
       if (response.status === 201) {
         console.info("Task added to db");
         setNewTasks("");
+        setFetchData(!fetchData);
       }
     } catch (err) {
       console.error(err);
