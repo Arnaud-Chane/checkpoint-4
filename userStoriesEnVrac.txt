@@ -5,9 +5,8 @@ modif user on admin user list
 
 
 Branch Names :
-Latest : 31
+Latest : 32
 
-17-listing_all_tasks_on_home_user_page
 18-delete_tasks
 19-progress_bar
 20-history_button_for_archived_tasks
@@ -17,6 +16,7 @@ Latest : 31
 24-styling_bars
 
 30-redirect_to_500_if_error_server
+32-logout_function
 
 
 
@@ -48,6 +48,7 @@ Done :
 13-verify_email
 14-create_and_verify_token_at_login
 16-secure_routes
+17-listing_all_tasks_on_home_user_page
 
 28-redirect_to_403_if_forbidden
 29-redirect_to_404_if_page_not_found
