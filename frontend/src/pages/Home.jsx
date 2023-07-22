@@ -62,6 +62,9 @@ function Home() {
 
   return (
     <div className="HomeAdminListingtask">
+      <div className="my-todo-list">
+        <h1 className="my-todo-list-title">My Todo List</h1>
+      </div>
       <div className="add-input">
         <InputForm
           state={newTasks}
