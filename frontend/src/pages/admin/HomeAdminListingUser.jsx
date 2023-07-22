@@ -5,6 +5,7 @@ import SearchBar from "../../components/SearchBar";
 
 function HomeAdminListingUser() {
   const [userList, setUserList] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -20,13 +21,21 @@ function HomeAdminListingUser() {
     fetchUser();
   }, []);
 
+  const searchListFilter = userList.filter((element) => {
+    if (searchInput.length > 0) {
+      const propertyValue = element.email.toLowerCase();
+      return propertyValue.includes(searchInput.toLowerCase());
+    }
+    return element;
+  });
+
   return (
     <div className="HomeAdminListingUser">
       <div className="search-bar-and-button-create">
-        <SearchBar />
+        <SearchBar setSearchInput={setSearchInput} searchInput={searchInput} />
       </div>
       <ul className="user-list">
-        {userList.map((user) => {
+        {searchListFilter.map((user) => {
           return (
             <li className="user" key={user.user_id}>
               {user.email}
