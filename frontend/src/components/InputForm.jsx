@@ -22,7 +22,7 @@ function InputForm({ state, setter, type, placeholder }) {
   );
 }
 InputForm.propTypes = {
-  state: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  state: PropTypes.string.isRequired,
   setter: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
