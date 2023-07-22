@@ -1,16 +1,35 @@
 .HomeAdminListingtask {
+@include flex-vertical;
+align-items: center;
+
+
   .add-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: 80vw;
+    margin: 2vh auto;
+    padding: 2vh 2vw;
 
 
     .add-task-btn{
-
+      width: 2rem;
+      height: 2rem;
     }
   }
 
   .task-list{
-    
+    @include flex-vertical;
+    height: 100%;
+    width: 70vw;
+
     
     .task{
+      display: flex;
+      justify-content: space-between;
+      margin: 1vh;
+      align-items: center;
 
 
       .task-to-edit{
@@ -18,7 +37,8 @@
       }
 
       .delete-btn{
-
+        width: 2rem;
+        height: 2rem;
       }
     }
   }

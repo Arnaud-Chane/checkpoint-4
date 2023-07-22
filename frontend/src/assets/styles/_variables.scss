@@ -19,3 +19,7 @@ $font-size-list-burger-tablet: 38px;
 $app-bg-color: #99D5D5;
 $app-bg-color-button: #078a9b;
 
+@mixin flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
