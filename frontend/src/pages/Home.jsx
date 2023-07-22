@@ -74,7 +74,7 @@ function Home() {
           type="submit"
           onClick={() => handleSubmit()}
         >
-          +
+          Add Task
         </button>
       </div>
 
@@ -82,7 +82,6 @@ function Home() {
         {taskList.map((task) => {
           return (
             <li className="task" key={task.task_id}>
-              <div className="task-to-edit">{task.name}</div>
               <button
                 className="delete-btn"
                 type="submit"
@@ -90,6 +89,7 @@ function Home() {
               >
                 X
               </button>
+              <div className="task-to-edit">{task.name}</div>
             </li>
           );
         })}

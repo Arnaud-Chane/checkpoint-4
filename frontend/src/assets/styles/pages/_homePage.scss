@@ -14,31 +14,32 @@ align-items: center;
 
 
     .add-task-btn{
-      width: 2rem;
-      height: 2rem;
+      width: 5rem;
+      height: 1.5rem;
     }
   }
 
   .task-list{
     @include flex-vertical;
-    height: 100%;
-    width: 70vw;
+    height: 5vh;
+    width: 80vw;
+    margin: 2vh auto;
+    padding: 2vh 0;
 
     
     .task{
       display: flex;
-      justify-content: space-between;
       margin: 1vh;
       align-items: center;
 
 
       .task-to-edit{
-
+        margin: 0 1rem;
       }
 
       .delete-btn{
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
       }
     }
   }
