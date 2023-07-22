@@ -7,13 +7,11 @@ Features :
 26-404_page
 27-500_page
 
-08-back_create_routes_for_tasks
-
 17-listing_all_tasks
 18-delete_tasks
 19-progress_bar
-20-history_button
-21-removed_done_button
+20-history_button_for_archived_tasks
+21-done_button
 22-search_task_bar
 23-add_task_bar
 24-styling_bars
@@ -31,6 +29,8 @@ Done :
 
 06-front_create_routes
 07-back_create_routes_for_members
+08-back_create_routes_for_tasks
+
 09-register_new_members
 10-login_members
 11-verify_password
