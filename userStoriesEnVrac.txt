@@ -13,8 +13,7 @@ latest : 31
 24-styling_bars
 
 30-redirect_to_500_if_error_server
-31-admin_listing_user_page_visual
-
+31-admin_listing_all_users_page
 
 ToFinish :
 Style :
