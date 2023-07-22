@@ -1,11 +1,7 @@
 Features :
+latest : 31
 
-01-login_page_visual
-02-register_page_visual
-03-listing_tasks_page_visual
-25-403_page
-26-404_page
-27-500_page
+
 
 17-listing_all_tasks
 18-delete_tasks
@@ -16,10 +12,18 @@ Features :
 23-add_task_bar
 24-styling_bars
 
-
 30-redirect_to_500_if_error_server
 31-admin_listing_user_page_visual
 
+
+ToFinish :
+Style :
+01-login_page_visual
+02-register_page_visual
+03-listing_tasks_page_visual
+25-403_page
+26-404_page
+27-500_page
 
 
 
