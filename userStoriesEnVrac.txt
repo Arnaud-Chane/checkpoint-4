@@ -12,7 +12,6 @@ Latest : 33
 20-history_button_for_archived_tasks
 21-done_button
 22-search_task_bar
-23-add_task_bar
 24-styling_bars
 
 30-redirect_to_500_if_error_server
@@ -49,6 +48,7 @@ Done :
 14-create_and_verify_token_at_login
 16-secure_routes
 17-listing_all_tasks_on_home_user_page
+23-add_task_bar
 
 28-redirect_to_403_if_forbidden
 29-redirect_to_404_if_page_not_found
