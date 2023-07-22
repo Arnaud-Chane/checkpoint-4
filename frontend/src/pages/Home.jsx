@@ -8,7 +8,7 @@ function Home() {
     const fetchTask = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}/api/tasks`
+          `${import.meta.env.VITE_BACKEND_URL}/api/users/:id/tasks`
         );
         setTaskList(response.data);
       } catch (error) {
