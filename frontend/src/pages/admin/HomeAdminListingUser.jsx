@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import SearchBar from "../../components/SearchBar";
+
 function HomeAdminListingUser() {
   const [userList, setUserList] = useState([]);
 
@@ -20,6 +22,9 @@ function HomeAdminListingUser() {
 
   return (
     <div className="HomeAdminListingUser">
+      <div className="search-bar-and-button-create">
+        <SearchBar />
+      </div>
       <ul className="user-list">
         {userList.map((user) => {
           return (
