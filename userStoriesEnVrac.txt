@@ -16,7 +16,6 @@ Latest : 33
 24-styling_bars
 
 30-redirect_to_500_if_error_server
-32-logout_function
 33-navbar_toggle_between_admin_and_user
 
 
@@ -53,5 +52,7 @@ Done :
 
 28-redirect_to_403_if_forbidden
 29-redirect_to_404_if_page_not_found
+32-logout_function
+
 
 
