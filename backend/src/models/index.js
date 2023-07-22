@@ -35,8 +35,8 @@ const TaskManager = require("./TaskManager");
 models.user = new UserManager();
 models.user.setDatabase(pool);
 
-models.user = new TaskManager();
-models.user.setDatabase(pool);
+models.task = new TaskManager();
+models.task.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
