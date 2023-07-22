@@ -39,7 +39,6 @@ function Home() {
         body
       );
       if (response.status === 201) {
-        console.info("Task added to db");
         setNewTasks("");
         setFetchData(!fetchData);
       }
