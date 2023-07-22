@@ -29,7 +29,7 @@ VALUES
   ('alexandre.moreau@example.com', "$argon2id$v=19$m=65536,t=5,p=1$03NmfWlLIBE0woTiJvADKA$VqPe3FJVqk28F0tpi1iAh62GyS2IO+tYM/seIjhhny4", 0),
   ('test@gmail.com', "$argon2id$v=19$m=65536,t=5,p=1$03NmfWlLIBE0woTiJvADKA$VqPe3FJVqk28F0tpi1iAh62GyS2IO+tYM/seIjhhny4", '1');
 
-INSERT INTO task (name, user_id, task_done,task_archived) 
+INSERT INTO task (name, user_id, task_done, task_archived) 
 VALUES 
 ("test1", 1, 0, 0),
 ("test2", 1, 0, 0),
