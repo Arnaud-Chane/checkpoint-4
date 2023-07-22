@@ -18,9 +18,19 @@ function HomeAdminListingUser() {
     fetchUser();
   }, []);
 
-  console.info(userList);
-
-  return <div>Admin page</div>;
+  return (
+    <div className="HomeAdminListingUser">
+      <ul className="user-list">
+        {userList.map((user) => {
+          return (
+            <li className="user" key={user.user_id}>
+              {user.email}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
 export default HomeAdminListingUser;
