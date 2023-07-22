@@ -12,10 +12,10 @@ class TaskManager extends AbstractManager {
     );
   }
 
-  findTaskByUserId() {
+  findTaskByUserId(tasks) {
     return this.database.query(
-      `select * from  ${this.table} where ${this.table}_id = ?`,
-      [id]
+      `select * from  ${this.table} where user_id = ?`,
+      [tasks.user_id]
     );
   }
 
