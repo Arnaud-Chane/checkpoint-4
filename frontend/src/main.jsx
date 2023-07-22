@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Page403 from "./pages/Page403";
+import Page404 from "./pages/Page404";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/page-403",
         element: <Page403 />,
+      },
+      {
+        path: "*",
+        element: <Page404 />,
       },
       {
         path: "/admin",
