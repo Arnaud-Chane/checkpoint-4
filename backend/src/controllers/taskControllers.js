@@ -31,13 +31,14 @@ const getTaskById = (req, res) => {
 };
 
 const getTaskByUserId = (req, res) => {
+  const userId = req.params.id;
   models.task
-    .findTaskByUserId(req.params.id)
+    .findTaskByUserId(userId)
     .then(([task]) => {
       if (task[0] == null) {
         res.sendStatus(404);
       } else {
-        res.send(task[0]);
+        res.send(task);
       }
     })
     .catch((err) => {
