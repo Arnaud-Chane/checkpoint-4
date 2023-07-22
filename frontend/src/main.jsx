@@ -6,6 +6,8 @@ import {
   Navigate,
 } from "react-router-dom";
 
+import Root from "./layout/Root";
+
 import PrivateRoutes from "./utils/PrivateRoutes";
 import userRoles from "./utils/constantRoles";
 
@@ -21,6 +23,7 @@ import HomeAdminListingUser from "./pages/admin/HomeAdminListingUser";
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Root />,
     children: [
       {
         index: true,
